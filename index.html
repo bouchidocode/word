@@ -3,21 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word Generator</title>
+    <title>Customizable Word Generator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Word Generator</h1>
-        <div class="input-section">
-            <!-- Input fields for positions -->
-            <input type="number" id="length" placeholder="Length">
-            <input type="number" id="maxWords" placeholder="Max Words"><br>
-            <div id="inputsContainer"></div>
-        </div>
+        <h1>Customizable Word Generator</h1>
+        <p>Click the button to generate words</p>
+        
+        <label for="length">Number of letters:</label>
+        <input type="number" id="length" value="1" min="1">
+        
         <button onclick="generateWords()">Generate Words</button>
-        <h3>Generated Words:</h3>
-        <div class="output-section" id="output"></div>
+        
+        <p id="result"></p>
+
+        <div class="info">
+            <p><strong>Letters:</strong> abcdefghijklmnopqrstuvwxyz</p>
+            <p><strong>Consonant:</strong> bcdfghjklmnpqrstvwxyz</p>
+            <p><strong>Vowel:</strong> aeiou</p>
+            <p><strong>Numbers:</strong> 0123456789</p>
+            <p><strong>Others:</strong> ~!@#$%^&*()-_=+</p>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
