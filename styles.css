@@ -38,3 +38,7 @@ button:hover {
     margin-top: 20px;
     color: #333;
 }
+
+input {
+    margin: 5px 0;
+}
