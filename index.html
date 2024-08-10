@@ -12,8 +12,10 @@
         <p>Click the button to generate words</p>
         
         <label for="length">Number of letters:</label>
-        <input type="number" id="length" value="1" min="1">
+        <input type="number" id="length" value="1" min="1" onchange="createCharInputs()">
         
+        <div id="charInputs"></div>
+
         <button onclick="generateWords()">Generate Words</button>
         
         <p id="result"></p>
