@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Word Generator</h1>
+        <div class="input-section">
+            <label for="letters">Enter Letters:</label>
+            <input type="text" id="letters" placeholder="abcdef...">
+            
+            <label for="numbers">Enter Numbers:</label>
+            <input type="text" id="numbers" placeholder="12345...">
+        </div>
+        <button onclick="generateWords()">Generate Words</button>
+        <h3>Generated Words:</h3>
+        <div class="output-section" id="output"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
