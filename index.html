@@ -10,11 +10,10 @@
     <div class="container">
         <h1>Word Generator</h1>
         <div class="input-section">
-            <label for="letters">Enter Letters:</label>
-            <input type="text" id="letters" placeholder="abcdef...">
-            
-            <label for="numbers">Enter Numbers:</label>
-            <input type="text" id="numbers" placeholder="12345...">
+            <!-- Input fields for positions -->
+            <input type="number" id="length" placeholder="Length">
+            <input type="number" id="maxWords" placeholder="Max Words"><br>
+            <div id="inputsContainer"></div>
         </div>
         <button onclick="generateWords()">Generate Words</button>
         <h3>Generated Words:</h3>
