@@ -8,27 +8,32 @@
 </head>
 <body>
     <div class="container">
-        <h1>Customizable Word Generator</h1>
-        <p>Click the button to generate words (Auto-copy enabled)</p>
-        
-        <label for="length">Number of letters:</label>
-        <input type="number" id="length" value="1" min="1" onchange="createCharInputs()">
-        
-        <div id="charInputs"></div>
+        <div class="box" id="input-box">
+            <h1>Customizable Word Generator</h1>
+            <p>Click the button to generate words (Auto-copy enabled)</p>
 
-        <label for="numWords">Number of words:</label>
-        <input type="number" id="numWords" value="1" min="1">
+            <label for="length">Number of letters:</label>
+            <input type="number" id="length" value="1" min="1" onchange="createCharInputs()">
 
-        <button onclick="generateWords()">GENERATE</button>
-        
-        <p id="result"></p>
+            <div id="charInputs"></div>
 
-        <div class="info">
-            <p><strong>Letters:</strong> abcdefghijklmnopqrstuvwxyz</p>
-            <p><strong>Consonants:</strong> bcdfghjklmnpqrstvwxyz</p>
-            <p><strong>Vowels:</strong> aeiou</p>
-            <p><strong>Numbers:</strong> 0123456789</p>
-            <p><strong>Others:</strong> ~!@#$%^&*()-_=+</p>
+            <label for="numWords">Number of words:</label>
+            <input type="number" id="numWords" value="1" min="1">
+
+            <button onclick="generateWords()">GENERATE</button>
+
+            <div class="info">
+                <p><strong>Letters:</strong> abcdefghijklmnopqrstuvwxyz</p>
+                <p><strong>Consonants:</strong> bcdfghjklmnpqrstvwxyz</p>
+                <p><strong>Vowels:</strong> aeiou</p>
+                <p><strong>Numbers:</strong> 0123456789</p>
+                <p><strong>Others:</strong> ~!@#$%^&*()-_=+</p>
+            </div>
+        </div>
+
+        <div class="box" id="result-box">
+            <h1>Generated Words</h1>
+            <p id="result"></p>
         </div>
     </div>
     <script src="script.js"></script>
