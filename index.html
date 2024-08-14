@@ -10,20 +10,23 @@
     <div class="container">
         <h1>Customizable Word Generator</h1>
         <p>Click the button to generate words</p>
-        
+
         <label for="length">Number of letters:</label>
         <input type="number" id="length" value="1" min="1" onchange="createCharInputs()">
-        
+
         <div id="charInputs"></div>
 
-        <button onclick="generateWords()">Generate Words</button>
-        
+        <label for="numWords">Number of words:</label>
+        <input type="number" id="numWords" value="1" min="1">
+
+        <button onclick="generateWords()">GENERATE</button>
+
         <p id="result"></p>
 
         <div class="info">
             <p><strong>Letters:</strong> abcdefghijklmnopqrstuvwxyz</p>
-            <p><strong>Consonant:</strong> bcdfghjklmnpqrstvwxyz</p>
-            <p><strong>Vowel:</strong> aeiou</p>
+            <p><strong>Consonants:</strong> bcdfghjklmnpqrstvwxyz</p>
+            <p><strong>Vowels:</strong> aeiou</p>
             <p><strong>Numbers:</strong> 0123456789</p>
             <p><strong>Others:</strong> ~!@#$%^&*()-_=+</p>
         </div>
