@@ -3,34 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customizable Word Generator</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Word Generator</title>
+    <style>
+        #resultBox {
+            width: 80%;
+            height: 100px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Customizable Word Generator</h1>
-        <p>Click the button to generate words</p>
-        
-        <label for="length">Number of letters:</label>
-        <input type="number" id="length" value="1" min="1" onchange="createCharInputs()">
-        
-        <div id="charInputs"></div>
+    <h1>Customizable Word Generator</h1>
+    <!-- Other inputs for number of letters and words -->
 
-        <label for="numWords">Number of words:</label>
-        <input type="number" id="numWords" value="1" min="1">
+    <button onclick="generateWords()">Generate Words</button>
+    <div id="resultBox"></div>
+    <button onclick="autoCopy()">Copy All Results</button>
 
-        <button onclick="generateWords()">GENERATE</button>
-        
-        <p id="result"></p>
+    <script>
+        function generateWords() {
+            // This function should contain your word generation logic
+            const words = "Generated words go here."; // Example
+            document.getElementById('resultBox').textContent = words;
+        }
 
-        <div class="info">
-            <p><strong>Letters:</strong> abcdefghijklmnopqrstuvwxyz</p>
-            <p><strong>Consonants:</strong> bcdfghjklmnpqrstvwxyz</p>
-            <p><strong>Vowels:</strong> aeiou</p>
-            <p><strong>Numbers:</strong> 0123456789</p>
-            <p><strong>Others:</strong> ~!@#$%^&*()-_=+</p>
-        </div>
-    </div>
-    <script src="script.js"></script>
+        function autoCopy() {
+            const resultBox = document.getElementById('resultBox');
+            const range = document.createRange();
+            range.selectNodeContents(resultBox);
+            const selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            
+            try {
+                document.execCommand('copy');
+                alert('Results copied to clipboard!');
+            } catch (err) {
+                alert('There was an error copying the results');
+            }
+        }
+    </script>
 </body>
 </html>
