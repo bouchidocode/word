@@ -1,3 +1,18 @@
+function createCharInputs() {
+    const container = document.getElementById('charInputs');
+    container.innerHTML = ''; // Clear existing inputs
+
+    const length = document.getElementById('length').value;
+    for (let i = 1; i <= length; i++) {
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.placeholder = `Allowed characters for position ${i}`;
+        input.id = `charInput${i}`;
+        container.appendChild(input);
+        container.appendChild(document.createElement('br'));
+    }
+}
+
 function generateWords() {
     const length = document.getElementById('length').value;
     const numberOfWords = document.getElementById('numWords').value;
@@ -15,20 +30,8 @@ function generateWords() {
             }
         }
 
-        result.push(word); // Push the word into the result array
+        result += `${word}\n`;
     }
 
-    const resultElement = document.getElementById('result');
-    resultElement.innerText = result.join(', '); // Display the generated words
-
-    const wordsToCopy = result.join(', '); // Join the words with a comma for copying
-
-    // Copy the generated words to the clipboard
-    navigator.clipboard.writeText(wordsToCopy)
-        .then(() => {
-            console.log('Words copied to clipboard');
-        })
-        .catch(err => {
-            console.error('Failed to copy words: ', err);
-        });
+    document.getElementById('result').innerText = result;
 }
