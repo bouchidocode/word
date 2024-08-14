@@ -33,5 +33,20 @@ function generateWords() {
         result += `${word}\n`;
     }
 
-    document.getElementById('result').innerText = result;
+    const resultText = result.trim();
+    document.getElementById('result').innerText = resultText;
+
+    // Auto-copy to clipboard
+    copyToClipboard(resultText);
+}
+
+function copyToClipboard(text) {
+    const tempInput = document.createElement('textarea');
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+    
+    alert('Generated words copied to clipboard!');
 }
