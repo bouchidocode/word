@@ -12,6 +12,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    align-items: center;
+    justify-content: center;
 }
 
 .box {
@@ -21,7 +23,7 @@ body {
     text-align: center;
     box-shadow: 0px 0px 10px 0px #00000050;
     flex: 1 1 300px;
-    max-width: 45%;
+    max-width: 40%;
 }
 
 h1 {
@@ -54,4 +56,17 @@ input {
 #result {
     white-space: pre-wrap; /* Preserve line breaks */
     text-align: left;
+    max-height: 400px; /* Adjust this value to your preference */
+    overflow-y: auto; /* Enable vertical scrollbar */
+}
+
+/* Logo Space Styling */
+.logo-space {
+    flex: 0 0 100px;
+    text-align: center;
+}
+
+#logo {
+    max-width: 100px;
+    height: auto;
 }
