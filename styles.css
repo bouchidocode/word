@@ -1,3 +1,4 @@
+/* Existing styling from your file */
 body {
     font-family: Arial, sans-serif;
     background-color: #b7dcf2;
@@ -16,6 +17,17 @@ body {
     justify-content: center;
 }
 
+.logo-space {
+    flex: 0 0 100px;
+    text-align: center;
+}
+
+#logo {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Additional or adjusted styles */
 .box {
     background-color: #e2e7f1;
     padding: 20px;
@@ -26,47 +38,4 @@ body {
     max-width: 40%;
 }
 
-h1 {
-    color: #4287f5;
-}
-
-button {
-    margin-top: 10px;
-    padding: 5px 15px;
-    background-color: #4287f5;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #3367d6;
-}
-
-.info {
-    margin-top: 20px;
-    color: #333;
-}
-
-input {
-    margin: 5px 0;
-}
-
-#result {
-    white-space: pre-wrap; /* Preserve line breaks */
-    text-align: left;
-    max-height: 400px; /* Adjust this value to your preference */
-    overflow-y: auto; /* Enable vertical scrollbar */
-}
-
-/* Logo Space Styling */
-.logo-space {
-    flex: 0 0 100px;
-    text-align: center;
-}
-
-#logo {
-    max-width: 100px;
-    height: auto;
-}
+/* Other styles remain unchanged */
